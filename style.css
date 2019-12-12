@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background: rgba(202, 134, 89, 0.4);
+  z-index: 0;
+}
+
+.textbox {
+  font-size: 100px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0.1;
+}
+
+span {
+  display: inline-block;
+  font-weight: bolder;
+  animation: mover 6s linear infinite;
+  color: rgba(202, 134, 89, 0.1);
+}
+
+@keyframes mover {
+  0% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+  }
+
+  50% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    transform: translateX(30px);
+  }
+
+  100% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+  }
+}
+
+span:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+span:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+span:nth-child(4) {
+  animation-delay: 2s;
+}
+
+span:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+span:nth-child(6) {
+  animation-delay: 3s;
+}
+
+.searchbox {
+  display: inline-block;
+}
+div input {
+  z-index: 0.2;
+  height: 50px;
+  font-size: 100px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  border: none;
+  background-color: rgba(202, 134, 89, 0.1);
+}
+input[type="text"] {
+  font-size: xx-large;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  color: ivory;
+  border-radius: 10px;
+  padding: 5px;
+}
+input:focus {
+  outline-offset: 0px;
+  outline-color: #eed5c4;
+}
+input::placeholder {
+  color: ivory;
+}
